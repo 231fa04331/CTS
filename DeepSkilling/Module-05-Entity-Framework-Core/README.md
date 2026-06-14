@@ -1,6 +1,6 @@
-# Module-1-Design-Patterns-and-Principles
+# Module-05-Entity-Framework-Core
 
-This folder contains assessment screenshots, certificates, quiz results, and hands-on proofs for the Design Patterns and Principles module.
+This folder contains assessment screenshots, certificates, quiz results, and hands-on proofs for the Entity Framework Core module.
 
 ## Contents
 - **Assessments**: Assessment screenshots and results

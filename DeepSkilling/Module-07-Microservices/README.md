@@ -1,6 +1,6 @@
-# Module-4-NUnit-and-Moq
+# Module-07-Microservices
 
-This folder contains assessment screenshots, certificates, quiz results, and hands-on proofs for the NUnit and Moq module.
+This folder contains assessment screenshots, certificates, quiz results, and hands-on proofs for the Microservices module.
 
 ## Contents
 - **Assessments**: Assessment screenshots and results
