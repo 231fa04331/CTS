@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selecting Elements</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<h1>Original Heading</h1>
+
+<p id="para1">Paragraph 1</p>
+<p id="para2">Paragraph 2</p>
+
+<button id="hideBtn">Hide Paragraph</button>
+
+<script>
+$(document).ready(function(){
+
+    $("h1").text("Welcome to jQuery");
+
+    $("#hideBtn").click(function(){
+        $("#para2").hide();
+    });
+
+});
+</script>
+
+</body>
+</html>

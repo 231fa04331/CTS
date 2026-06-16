@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Helpers</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        #box{
+            width:300px;
+            height:100px;
+            border:1px solid black;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="box">
+    Hover or Click Me
+</div>
+
+<br>
+
+<input type="text" id="nameInput" placeholder="Type Something">
+
+<p id="output"></p>
+
+<script>
+
+$(document).ready(function(){
+
+    $("#box").click(function(){
+        $(this).text("Single Click Detected");
+    });
+
+    $("#box").dblclick(function(){
+        $(this).text("Double Click Detected");
+    });
+
+    $("#box").mouseenter(function(){
+        $(this).css("background","lightgreen");
+    });
+
+    $("#box").mouseleave(function(){
+        $(this).css("background","white");
+    });
+
+    $("#nameInput").keypress(function(){
+        $("#output").text("Typing...");
+    });
+
+});
+
+</script>
+
+</body>
+</html>

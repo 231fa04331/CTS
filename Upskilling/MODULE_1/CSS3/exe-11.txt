@@ -1,0 +1,16 @@
+Open the webpage in Chrome.
+Press F12.
+Click Toggle Device Toolbar (Ctrl + Shift + M).
+Test:
+iPhone
+iPad
+Responsive Mode
+Inspect elements:
+Check applied CSS rules.
+Enable/disable properties.
+Modify padding, margin, width.
+Open Network Tab.
+Refresh the page.
+Verify:
+styles.css loads successfully.
+Status code = 200 OK.

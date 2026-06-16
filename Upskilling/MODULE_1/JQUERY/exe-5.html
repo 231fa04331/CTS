@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events Example</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        #colorBox{
+            width:200px;
+            height:200px;
+            border:1px solid black;
+            background:white;
+        }
+    </style>
+</head>
+<body>
+
+<button id="colorBtn">Change Color</button>
+
+<br><br>
+
+<div id="colorBox"></div>
+
+<script>
+
+$(document).ready(function(){
+
+    $("#colorBtn").click(function(){
+        $("#colorBox").css("background","red");
+    });
+
+    $("#colorBtn").dblclick(function(){
+        $("#colorBox").css("background","white");
+    });
+
+});
+
+</script>
+
+</body>
+</html>

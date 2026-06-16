@@ -1,0 +1,21 @@
+.eventCard{
+    border:2px solid black;
+    padding:20px;
+    margin:20px;
+}
+
+.selectedField{
+    outline:3px solid red;
+}
+
+/* Hidden */
+
+.hidden{
+    visibility:hidden;
+}
+
+/* Removed */
+
+.removed{
+    display:none;
+}

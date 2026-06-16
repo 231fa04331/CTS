@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function validatePhone(){
+    let phone=document.getElementById("phone").value;
+
+    if(phone.length!=10){
+        alert("Phone number must be 10 digits");
+    }
+}
+
+function showFee(){
+    let fee=document.getElementById("event").value;
+    document.getElementById("fee").innerHTML =
+    "Fee: ₹" + fee;
+}
+
+function submitFeedback(){
+    alert("Feedback Submitted Successfully");
+}
+
+function enlargeImage(img){
+    img.style.width="300px";
+}
+
+function countChars(){
+    let count=document.getElementById("feedback").value.length;
+    document.getElementById("count").innerHTML =
+    count + " Characters";
+}
+
+</script>
+</head>
+<body>
+
+Phone:
+<input type="text" id="phone" onblur="validatePhone()">
+
+<br><br>
+
+Select Event:
+<select id="event" onchange="showFee()">
+    <option value="100">Music</option>
+    <option value="200">Sports</option>
+    <option value="150">Art</option>
+</select>
+
+<p id="fee"></p>
+
+<img src="event1.jpg" width="150"
+ondblclick="enlargeImage(this)">
+
+<br><br>
+
+<textarea id="feedback"
+onkeyup="countChars()"></textarea>
+
+<p id="count">0 Characters</p>
+
+<button onclick="submitFeedback()">
+Submit
+</button>
+
+</body>
+</html>
