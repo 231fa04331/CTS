@@ -1,0 +1,237 @@
+The Factory Method Pattern is a design pattern used to create objects 
+without directly using new in the client code.
+
+Factory Method Pattern is a creational design pattern 
+that creates objects through a factory class instead of 
+directly using constructors. It hides object creation logic, 
+reduces coupling, and makes the code easier to extend and maintain.
+
+
+Document.java
+public interface Document {
+
+    
+    void open();
+
+   
+    void save();
+
+   
+    void close();
+}
+
+
+WordDocument.java
+class WordDocument implements Document {
+
+    @Override
+    public void open() {
+        System.out.println("[WordDocument] Opening Word document (.docx)...");
+    }
+
+    @Override
+    public void save() {
+        System.out.println("[WordDocument] Saving Word document (.docx)...");
+    }
+
+    @Override
+    public void close() {
+        System.out.println("[WordDocument] Closing Word document (.docx).");
+    }
+}
+
+PdfDocument.java
+class PdfDocument implements Document {
+
+    @Override
+    public void open() {
+        System.out.println("[PdfDocument] Opening PDF document (.pdf)...");
+    }
+
+    @Override
+    public void save() {
+        System.out.println("[PdfDocument] Saving PDF document (.pdf)...");
+    }
+
+    @Override
+    public void close() {
+        System.out.println("[PdfDocument] Closing PDF document (.pdf).");
+    }
+}class PdfDocument implements Document {
+
+    @Override
+    public void open() {
+        System.out.println("[PdfDocument] Opening PDF document (.pdf)...");
+    }
+
+    @Override
+    public void save() {
+        System.out.println("[PdfDocument] Saving PDF document (.pdf)...");
+    }
+
+    @Override
+    public void close() {
+        System.out.println("[PdfDocument] Closing PDF document (.pdf).");
+    }
+}
+
+ExcelDocument.java
+class ExcelDocument implements Document {
+
+    @Override
+    public void open() {
+        System.out.println("[ExcelDocument] Opening Excel document (.xlsx)...");
+    }
+
+    @Override
+    public void save() {
+        System.out.println("[ExcelDocument] Saving Excel document (.xlsx)...");
+    }
+
+    @Override
+    public void close() {
+        System.out.println("[ExcelDocument] Closing Excel document (.xlsx).");
+    }
+}
+
+DocumentFactory.java
+abstract class DocumentFactory {
+
+    public abstract Document createDocument();
+
+    public void processDocument() {
+        Document doc = createDocument();
+        doc.open();
+        doc.save();
+        doc.close();
+    }
+}
+
+WordDocumentFactory.java
+class WordDocumentFactory extends DocumentFactory {
+
+    @Override
+    public Document createDocument() {
+        System.out.println("[WordDocumentFactory] Creating a Word document...");
+        return new WordDocument();
+    }
+}
+
+PdfDocumentFactory.java
+class PdfDocumentFactory extends DocumentFactory {
+
+    @Override
+    public Document createDocument() {
+        System.out.println("[PdfDocumentFactory] Creating a PDF document...");
+        return new PdfDocument();
+    }
+}
+
+ExcelDocumentFactory.java
+class ExcelDocumentFactory extends DocumentFactory {
+
+    @Override
+    public Document createDocument() {
+        System.out.println("[ExcelDocumentFactory] Creating an Excel document...");
+        return new ExcelDocument();
+    }
+}
+
+
+FactoryMethoTest.java
+public class FactoryMethodTest {
+
+    public static void main(String[] args) {
+
+        System.out.println("=== Factory Method Pattern — Document Management Test ===\n");
+
+        System.out.println("-- Test 1: Word Document --");
+        DocumentFactory wordFactory = new WordDocumentFactory();
+        wordFactory.processDocument();
+
+        System.out.println();
+
+        System.out.println("-- Test 2: PDF Document --");
+        DocumentFactory pdfFactory = new PdfDocumentFactory();
+        pdfFactory.processDocument();
+
+        System.out.println();
+
+        System.out.println("-- Test 3: Excel Document --");
+        DocumentFactory excelFactory = new ExcelDocumentFactory();
+        excelFactory.processDocument();
+
+        System.out.println();
+
+        System.out.println("-- Test 4: Direct createDocument() call --");
+        Document doc = new PdfDocumentFactory().createDocument();
+        doc.open();
+        doc.save();
+        doc.close();
+
+        System.out.println();
+
+        System.out.println("-- Test 5: Polymorphic factory iteration --");
+
+        DocumentFactory[] factories = {
+            new WordDocumentFactory(),
+            new PdfDocumentFactory(),
+            new ExcelDocumentFactory()
+        };
+
+        for (DocumentFactory factory : factories) {
+            Document d = factory.createDocument();
+            d.open();
+            d.save();
+            d.close();
+            System.out.println();
+        }
+
+        System.out.println("=== All tests passed. ===");
+    }
+}
+
+output:
+=== Factory Method Pattern — Document Management Test ===
+
+-- Test 1: Word Document --
+[WordDocumentFactory] Creating a Word document...
+[WordDocument] Opening Word document (.docx)...
+[WordDocument] Saving Word document (.docx)...
+[WordDocument] Closing Word document (.docx).
+
+-- Test 2: PDF Document --
+[PdfDocumentFactory] Creating a PDF document...
+[PdfDocument] Opening PDF document (.pdf)...
+[PdfDocument] Saving PDF document (.pdf)...
+[PdfDocument] Closing PDF document (.pdf).
+
+-- Test 3: Excel Document --
+[ExcelDocumentFactory] Creating an Excel document...
+[ExcelDocument] Opening Excel document (.xlsx)...
+[ExcelDocument] Saving Excel document (.xlsx)...
+[ExcelDocument] Closing Excel document (.xlsx).
+
+-- Test 4: Direct createDocument() call --
+[PdfDocumentFactory] Creating a PDF document...
+[PdfDocument] Opening PDF document (.pdf)...
+[PdfDocument] Saving PDF document (.pdf)...
+[PdfDocument] Closing PDF document (.pdf).
+
+-- Test 5: Polymorphic factory iteration --
+[WordDocumentFactory] Creating a Word document...
+[WordDocument] Opening Word document (.docx)...
+[WordDocument] Saving Word document (.docx)...
+[WordDocument] Closing Word document (.docx).
+
+[PdfDocumentFactory] Creating a PDF document...
+[PdfDocument] Opening PDF document (.pdf)...
+[PdfDocument] Saving PDF document (.pdf)...
+[PdfDocument] Closing PDF document (.pdf).
+
+[ExcelDocumentFactory] Creating an Excel document...
+[ExcelDocument] Opening Excel document (.xlsx)...
+[ExcelDocument] Saving Excel document (.xlsx)...
+[ExcelDocument] Closing Excel document (.xlsx).
+
+=== All tests passed. ===
