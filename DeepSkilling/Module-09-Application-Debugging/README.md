@@ -1,6 +1,6 @@
-# Module-6-ASPNet-Core-Web-API
+# Module-09-Application-Debugging
 
-This folder contains assessment screenshots, certificates, quiz results, and hands-on proofs for the ASP.NET Core Web API module.
+This folder contains assessment screenshots, certificates, quiz results, and hands-on proofs for the Application Debugging module.
 
 ## Contents
 - **Assessments**: Assessment screenshots and results

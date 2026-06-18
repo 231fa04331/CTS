@@ -1,6 +1,6 @@
-# Module-9-Application-Debugging
+# Module-03-Advanced-SQL
 
-This folder contains assessment screenshots, certificates, quiz results, and hands-on proofs for the Application Debugging module.
+This folder contains assessment screenshots, certificates, quiz results, and hands-on proofs for the Advanced SQL module.
 
 ## Contents
 - **Assessments**: Assessment screenshots and results

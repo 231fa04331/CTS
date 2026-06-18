@@ -1,4 +1,4 @@
-# Module-8-Angular
+# Module-08-Angular
 
 This folder contains assessment screenshots, certificates, quiz results, and hands-on proofs for the Angular module.
 

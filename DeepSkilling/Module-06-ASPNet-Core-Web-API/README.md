@@ -1,6 +1,6 @@
-# Module-3-Advanced-SQL
+# Module-06-ASPNet-Core-Web-API
 
-This folder contains assessment screenshots, certificates, quiz results, and hands-on proofs for the Advanced SQL module.
+This folder contains assessment screenshots, certificates, quiz results, and hands-on proofs for the ASP.NET Core Web API module.
 
 ## Contents
 - **Assessments**: Assessment screenshots and results
