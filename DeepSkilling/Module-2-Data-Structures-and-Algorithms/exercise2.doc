@@ -1,0 +1,190 @@
+Product Class
+
+class Product
+{
+    public int ProductId;
+    public string ProductName;
+    public string Category;
+
+    public Product(int id, string name, string category)
+    {
+        ProductId = id;
+        ProductName = name;
+        Category = category;
+    }
+
+    public void Display()
+    {
+        Console.WriteLine("ID: " + ProductId +
+                          ", Name: " + ProductName +
+                          ", Category: " + Category);
+    }
+}
+
+
+Linear Search Implementation
+
+using System;
+
+class Product
+{
+    public int ProductId;
+    public string ProductName;
+    public string Category;
+
+    public Product(int id, string name, string category)
+    {
+        ProductId = id;
+        ProductName = name;
+        Category = category;
+    }
+
+    public void Display()
+    {
+        Console.WriteLine("ID: " + ProductId +
+                          ", Name: " + ProductName +
+                          ", Category: " + Category);
+    }
+}
+
+class Program
+{
+    static Product LinearSearch(Product[] products, int targetId)
+    {
+        foreach (Product p in products)
+        {
+            if (p.ProductId == targetId)
+                return p;
+        }
+
+        return null;
+    }
+
+    static void Main()
+    {
+        Product[] products =
+        {
+            new Product(101, "Laptop", "Electronics"),
+            new Product(102, "Mobile", "Electronics"),
+            new Product(103, "Shoes", "Fashion"),
+            new Product(104, "Watch", "Accessories")
+        };
+
+        Console.Write("Enter Product ID to search: ");
+        int target = int.Parse(Console.ReadLine());
+
+        Product result = LinearSearch(products, target);
+
+        if (result != null)
+        {
+            Console.WriteLine("Product Found:");
+            result.Display();
+        }
+        else
+        {
+            Console.WriteLine("Product Not Found");
+        }
+    }
+}
+
+
+
+Binary Search Implementation
+
+using System;
+
+class Product
+{
+    public int ProductId;
+    public string ProductName;
+    public string Category;
+
+    public Product(int id, string name, string category)
+    {
+        ProductId = id;
+        ProductName = name;
+        Category = category;
+    }
+
+    public void Display()
+    {
+        Console.WriteLine("ID: " + ProductId +
+                          ", Name: " + ProductName +
+                          ", Category: " + Category);
+    }
+}
+
+class Program
+{
+    static Product BinarySearch(Product[] products, int targetId)
+    {
+        int low = 0;
+        int high = products.Length - 1;
+
+        while (low <= high)
+        {
+            int mid = (low + high) / 2;
+
+            if (products[mid].ProductId == targetId)
+                return products[mid];
+
+            if (products[mid].ProductId < targetId)
+                low = mid + 1;
+            else
+                high = mid - 1;
+        }
+
+        return null;
+    }
+
+    static void Main()
+    {
+        Product[] products =
+        {
+            new Product(101, "Laptop", "Electronics"),
+            new Product(102, "Mobile", "Electronics"),
+            new Product(103, "Shoes", "Fashion"),
+            new Product(104, "Watch", "Accessories"),
+            new Product(105, "Bag", "Fashion")
+        };
+
+        Console.Write("Enter Product ID to search: ");
+        int target = int.Parse(Console.ReadLine());
+
+        Product result = BinarySearch(products, target);
+
+        if (result != null)
+        {
+            Console.WriteLine("Product Found:");
+            result.Display();
+        }
+        else
+        {
+            Console.WriteLine("Product Not Found");
+        }
+    }
+}
+
+
+OUTPUT:
+
+Enter Product ID to search: 103
+Product Found:
+ID: 103, Name: Shoes, Category: Fashion
+
+Enter Product ID to search: 104
+Product Found:
+ID: 104, Name: Watch, Category: Accessories
+
+
+
+
+
+
+
+
+
+For an e-commerce platform containing thousands or millions of products,
+ Binary Search is more suitable because it has O(log n) time complexity, making product searches significantly
+  faster than Linear Search (O(n)). However, 
+  products must be maintained in sorted order for Binary Search to work correctly.

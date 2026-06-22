@@ -1,0 +1,38 @@
+using System;
+
+class FinancialForecast
+{
+    static double FutureValue(double presentValue, double growthRate, int years)
+    {
+        if (years == 0)
+            return presentValue;
+
+        return FutureValue(presentValue, growthRate, years - 1) * (1 + growthRate);
+    }
+
+    static void Main()
+    {
+        Console.Write("Enter Present Value: ");
+        double presentValue = double.Parse(Console.ReadLine());
+
+        Console.Write("Enter Growth Rate (%): ");
+        double growthRate = double.Parse(Console.ReadLine()) / 100;
+
+        Console.Write("Enter Number of Years: ");
+        int years = int.Parse(Console.ReadLine());
+
+        double result = FutureValue(presentValue, growthRate, years);
+
+        Console.WriteLine("Future Value after " + years + " years = " + result);
+    }
+}
+
+
+
+OUTPUT:
+Enter Present Value: 10000
+Enter Growth Rate (%): 10
+Enter Number of Years: 5
+
+
+Future Value after 5 years = 16105.1
