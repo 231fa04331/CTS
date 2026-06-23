@@ -1,0 +1,12 @@
+c:\Users\Lenovo\Desktop\CTS_repo\DeepSkilling\Module-4-NUnit-and-Moq\NUnit-Assignment\CalcLibrary\bin\Debug\net10.0\CalcLibrary.deps.json
+c:\Users\Lenovo\Desktop\CTS_repo\DeepSkilling\Module-4-NUnit-and-Moq\NUnit-Assignment\CalcLibrary\bin\Debug\net10.0\CalcLibrary.dll
+c:\Users\Lenovo\Desktop\CTS_repo\DeepSkilling\Module-4-NUnit-and-Moq\NUnit-Assignment\CalcLibrary\bin\Debug\net10.0\CalcLibrary.pdb
+c:\Users\Lenovo\Desktop\CTS_repo\DeepSkilling\Module-4-NUnit-and-Moq\NUnit-Assignment\CalcLibrary\obj\Debug\net10.0\CalcLibrary.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Lenovo\Desktop\CTS_repo\DeepSkilling\Module-4-NUnit-and-Moq\NUnit-Assignment\CalcLibrary\obj\Debug\net10.0\CalcLibrary.AssemblyInfoInputs.cache
+c:\Users\Lenovo\Desktop\CTS_repo\DeepSkilling\Module-4-NUnit-and-Moq\NUnit-Assignment\CalcLibrary\obj\Debug\net10.0\CalcLibrary.AssemblyInfo.cs
+c:\Users\Lenovo\Desktop\CTS_repo\DeepSkilling\Module-4-NUnit-and-Moq\NUnit-Assignment\CalcLibrary\obj\Debug\net10.0\CalcLibrary.csproj.CoreCompileInputs.cache
+c:\Users\Lenovo\Desktop\CTS_repo\DeepSkilling\Module-4-NUnit-and-Moq\NUnit-Assignment\CalcLibrary\obj\Debug\net10.0\CalcLibrary.sourcelink.json
+c:\Users\Lenovo\Desktop\CTS_repo\DeepSkilling\Module-4-NUnit-and-Moq\NUnit-Assignment\CalcLibrary\obj\Debug\net10.0\CalcLibrary.dll
+c:\Users\Lenovo\Desktop\CTS_repo\DeepSkilling\Module-4-NUnit-and-Moq\NUnit-Assignment\CalcLibrary\obj\Debug\net10.0\refint\CalcLibrary.dll
+c:\Users\Lenovo\Desktop\CTS_repo\DeepSkilling\Module-4-NUnit-and-Moq\NUnit-Assignment\CalcLibrary\obj\Debug\net10.0\CalcLibrary.pdb
+c:\Users\Lenovo\Desktop\CTS_repo\DeepSkilling\Module-4-NUnit-and-Moq\NUnit-Assignment\CalcLibrary\obj\Debug\net10.0\ref\CalcLibrary.dll
