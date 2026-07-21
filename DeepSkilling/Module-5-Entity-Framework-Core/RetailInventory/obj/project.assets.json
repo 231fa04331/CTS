@@ -2776,11 +2776,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\CTS_repo\\DeepSkilling\\Module-5-Entity-Framework-Core\\RetailInventory\\RetailInventory.csproj",
+      "projectUniqueName": "D:\\CTS_repo\\DeepSkilling\\Module-5-Entity-Framework-Core\\RetailInventory\\RetailInventory.csproj",
       "projectName": "RetailInventory",
-      "projectPath": "C:\\Users\\Lenovo\\Desktop\\CTS_repo\\DeepSkilling\\Module-5-Entity-Framework-Core\\RetailInventory\\RetailInventory.csproj",
+      "projectPath": "D:\\CTS_repo\\DeepSkilling\\Module-5-Entity-Framework-Core\\RetailInventory\\RetailInventory.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\Desktop\\CTS_repo\\DeepSkilling\\Module-5-Entity-Framework-Core\\RetailInventory\\obj\\",
+      "outputPath": "D:\\CTS_repo\\DeepSkilling\\Module-5-Entity-Framework-Core\\RetailInventory\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config"

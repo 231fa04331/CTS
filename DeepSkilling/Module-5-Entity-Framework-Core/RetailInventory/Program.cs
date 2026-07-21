@@ -1,21 +1,24 @@
-﻿using RetailInventory.Data;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using RetailInventory.Data;
 
 using var context = new AppDbContext();
 
-var categories = await context.Categories
-    .Include(c => c.Products)
-    .ToListAsync();
+Console.WriteLine("------ All Products ------");
 
-foreach (var category in categories)
+var products = await context.Products.ToListAsync();
+
+foreach (var p in products)
 {
-    Console.WriteLine("Category: " + category.Name);
-
-    foreach (var product in category.Products)
-    {
-        Console.WriteLine(
-            "Product: " + product.Name +
-            " Price: " + product.Price
-        );
-    }
+    Console.WriteLine($"{p.Name} - ₹{p.Price}");
 }
+Console.WriteLine("\n------ Find By ID ------");
+
+var product = await context.Products.FindAsync(1);
+
+Console.WriteLine($"Found: {product?.Name}");
+Console.WriteLine("\n------ Expensive Product ------");
+
+var expensive = await context.Products
+    .FirstOrDefaultAsync(p => p.Price > 50000);
+
+Console.WriteLine($"Expensive: {expensive?.Name}");
