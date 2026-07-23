@@ -1,0 +1,6 @@
+@FourthWebApi_HostAddress = http://localhost:5215
+
+GET {{FourthWebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

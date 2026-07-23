@@ -1,0 +1,32 @@
+h2{
+    color:#1976d2;
+}
+
+form{
+    width:350px;
+    margin:20px auto;
+    padding:20px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+input,
+select{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    box-sizing:border-box;
+}
+
+button{
+    padding:10px 15px;
+    background:#1976d2;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+button:disabled{
+    background:gray;
+    cursor:not-allowed;
+}

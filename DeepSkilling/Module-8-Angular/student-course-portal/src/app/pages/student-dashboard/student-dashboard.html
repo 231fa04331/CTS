@@ -1,0 +1,28 @@
+<h2>Student Dashboard</h2>
+
+<h3>Interpolation</h3>
+<p>Student : {{ studentName }}</p>
+<p>Course : {{ course }}</p>
+<p>Marks : {{ marks }}</p>
+
+<hr>
+
+<h3>Property Binding</h3>
+<input [value]="studentName">
+
+<hr>
+
+<h3>Event Binding</h3>
+<button (click)="changeCourse()">
+  Change Course
+</button>
+
+<p>Current Course: {{ course }}</p>
+
+<hr>
+
+<h3>Two-Way Binding</h3>
+
+<input [(ngModel)]="studentName">
+
+<p>Updated Name : {{ studentName }}</p>

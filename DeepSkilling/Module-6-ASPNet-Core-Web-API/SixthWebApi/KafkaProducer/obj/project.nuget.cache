@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "EqquS+1A4B4=",
+  "success": true,
+  "projectFilePath": "D:\\CTS_repo\\DeepSkilling\\Module-6-ASPNet-Core-Web-API\\SixthWebApi\\KafkaProducer\\KafkaProducer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lenovo\\.nuget\\packages\\confluent.kafka\\2.15.0\\confluent.kafka.2.15.0.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\librdkafka.redist\\2.15.0\\librdkafka.redist.2.15.0.nupkg.sha512"
+  ],
+  "logs": []
+}

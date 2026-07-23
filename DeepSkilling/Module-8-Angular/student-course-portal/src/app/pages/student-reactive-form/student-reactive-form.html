@@ -1,0 +1,76 @@
+
+<h2>Student Registration (Reactive Form)</h2>
+
+<form [formGroup]="studentForm"
+      (ngSubmit)="onSubmit()">
+
+  <label>Name</label><br>
+
+  <input
+      type="text"
+      formControlName="name">
+
+  @if(studentForm.get('name')?.touched &&
+      studentForm.get('name')?.invalid){
+
+      <p style="color:red">
+          Name must contain at least 3 characters.
+      </p>
+
+  }
+
+  <br>
+
+  <label>Email</label><br>
+
+  <input
+      type="email"
+      formControlName="email">
+
+  @if(studentForm.get('email')?.touched &&
+      studentForm.get('email')?.invalid){
+
+      <p style="color:red">
+          Enter a valid email.
+      </p>
+
+  }
+
+  <br>
+
+  <label>Course</label><br>
+
+  <select formControlName="course">
+
+      <option value="">Select Course</option>
+
+      <option>Angular</option>
+
+      <option>React</option>
+
+      <option>Java</option>
+
+      <option>Python</option>
+
+  </select>
+
+  @if(studentForm.get('course')?.touched &&
+      studentForm.get('course')?.invalid){
+
+      <p style="color:red">
+          Please select a course.
+      </p>
+
+  }
+
+  <br><br>
+
+  <button
+      type="submit"
+      [disabled]="studentForm.invalid">
+
+      Register
+
+  </button>
+
+</form>

@@ -1,0 +1,23 @@
+<h2>Directives Demo</h2>
+
+<div *ngIf="showCourses">
+  <h3>Available Courses</h3>
+
+  <ul>
+    <li *ngFor="let course of courses">
+      {{ course }}
+    </li>
+  </ul>
+</div>
+
+<hr>
+
+<h2>Pipes Demo</h2>
+
+<p>{{ 'angular' | uppercase }}</p>
+
+<p>{{ 'ANGULAR' | lowercase }}</p>
+
+<p>{{ fee | currency:'INR' }}</p>
+
+<p>{{ today | date:'fullDate' }}</p>
